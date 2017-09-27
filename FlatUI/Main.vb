@@ -108,7 +108,16 @@ Public Class formMain
     Private Sub OnTextMessageReceived(client As Client, str As String) Handles client.TextMessageReceived
         AddChatText(txtChat, str)
     End Sub
+
+    Private Sub TextToSpeech(ByRef str As String)
+        If cbTextToSpeech.Checked = True Then
+            Dim speaker = CreateObject("SAPI.spVoice")
+            speaker.speak(str)
+        End If
+    End Sub
     Private Sub OnPublicMessageReceived(client As Client, request As PublicMessageRequest) Handles client.PublicMessageReceived
+        TextToSpeech(request.username + " says " + request.message)
+        
         AddChatText(txtChat, request.username + " >> " + request.message)
     End Sub
     Private Sub OnUserListUpdated(client As Client, str() As String) Handles client.UserListUpdated
@@ -128,7 +137,7 @@ Public Class formMain
     '    e.Graphics.DrawEllipse(p, 1, 1, pnlClock.Width - 3, pnlClock.Height - 3)
     'End Sub
 
-    Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnConnect.Click
+    Public Sub Connect()
         If Not String.IsNullOrEmpty(txtUsername.Text) Then
             Dim ip As String =
                 TextBox1.Text + "." +
@@ -140,7 +149,7 @@ Public Class formMain
                 btnConnect.Text = "Connected"
                 btnConnect.Enabled = False
             End If
-            client.Login(txtUsername.Text,
+            client.Login(txtUsername.Text, Password.TextBox1.Text,
                      Sub(senderClient, response)
                          If response.isValid = True Then
                              client.status = StatusEnum.Validated
@@ -149,6 +158,10 @@ Public Class formMain
                      End Sub)
             txtUsername.Enabled = False
         End If
+    End Sub
+
+    Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnConnect.Click
+        Password.Show()
     End Sub
 
     'Send message when send button is clicked

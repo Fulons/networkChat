@@ -1,8 +1,10 @@
 ﻿Imports System.Windows.Forms
 Imports Server
 Imports ServerClientCommon.ServerClientCommon
-Public Class ServerForm
+Imports System.Xml
 
+Public Class ServerForm
+    Private xmlPath As String = "D:\Password\password.xml"
 #Region "Variables"
     Private WithEvents server As Server
 #End Region
@@ -26,7 +28,20 @@ Public Class ServerForm
     Private Sub OnClientVaildating(args As ClientValidatingEventArgs) Handles server.ClientVaildating
         AppendConsoleText("Validating " + args.receiver.username + "...")
         'do some vaildation
-        args.confirmAction()
+        Dim doc As New XmlDocument
+        doc.Load(xmlPath)
+        For Each child As XmlNode In doc.ChildNodes
+            If child.Name = "Users" Then
+                For Each user As XmlNode In child.ChildNodes
+                    Dim u As String = user.Attributes.GetNamedItem("name").Value
+                    Dim p As String = user.Attributes.GetNamedItem("password").Value
+                    If args.request.username = u AndAlso args.request.password = p Then
+                        args.confirmAction()
+                    End If
+                Next
+            End If
+        Next
+
     End Sub
 
     Private Sub OnClientValidatedSuccess(r As Receiver) Handles server.ClientValidatedSuccess
@@ -79,10 +94,6 @@ Public Class ServerForm
     End Sub
 
 #End Region
-
-
-
-
     'UPDATE TEXTBOX
     'Private Sub UpdateText(TB As TextBox, txt As String)
     '    If TB.InvokeRequired Then

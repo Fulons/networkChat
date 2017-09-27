@@ -99,6 +99,7 @@ Namespace ServerClientCommon
     <Serializable()>
     Public Class ValidationRequest : Inherits RequestMessageBase
         Public Property username As String
+        Public Property password As String
     End Class
     <Serializable()>
     Public Class EndSessionRequest : Inherits RequestMessageBase

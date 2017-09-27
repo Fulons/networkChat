@@ -91,7 +91,7 @@ Public Class Receiver
                 totalByteUsage += client.Available
                 Try
                     Dim f As New BinaryFormatter
-                    Dim msg As MessageBase = f.Deserialize(client.GetStream)
+                    Dim msg As MessageBase = f.Deserialize(client.GetStream())
                     OnMessageReceived(msg)
                 Catch ex As Exception
                     Dim e As Exception = New Exception("Unknown message. Could not deserialize", ex)

@@ -94,10 +94,10 @@ Public Class Client
     'Attemps to log in to server
     'ADD CALLBACK
     'SEND: ValidationRequest
-    Public Sub Login(username As String, callback As Action(Of Client, ValidationResponse))
+    Public Sub Login(username As String, password As String, callback As Action(Of Client, ValidationResponse))
         Dim request As New ValidationRequest()
         request.username = username
-
+        request.password = password
         AddCallback(callback, request)
         SendMessage(request)
     End Sub

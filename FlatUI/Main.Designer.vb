@@ -42,6 +42,7 @@ Partial Class formMain
         Me.RequestSessionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.cbTextToSpeech = New System.Windows.Forms.CheckBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,7 +50,7 @@ Partial Class formMain
         '
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(95, 9)
+        Me.lblWelcome.Location = New System.Drawing.Point(131, 16)
         Me.lblWelcome.Name = "lblWelcome"
         Me.lblWelcome.Size = New System.Drawing.Size(136, 29)
         Me.lblWelcome.TabIndex = 0
@@ -227,12 +228,23 @@ Partial Class formMain
         Me.Button1.TabIndex = 34
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'cbTextToSpeech
+        '
+        Me.cbTextToSpeech.AutoSize = True
+        Me.cbTextToSpeech.Location = New System.Drawing.Point(2, 1)
+        Me.cbTextToSpeech.Name = "cbTextToSpeech"
+        Me.cbTextToSpeech.Size = New System.Drawing.Size(153, 17)
+        Me.cbTextToSpeech.TabIndex = 35
+        Me.cbTextToSpeech.Text = "Incomming text To Speech"
+        Me.cbTextToSpeech.UseVisualStyleBackColor = True
+        '
         'formMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(351, 459)
+        Me.Controls.Add(Me.cbTextToSpeech)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.lboxUsers)
@@ -280,4 +292,5 @@ Partial Class formMain
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents RequestSessionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button1 As Button
+    Friend WithEvents cbTextToSpeech As System.Windows.Forms.CheckBox
 End Class
