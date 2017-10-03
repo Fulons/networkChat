@@ -1,6 +1,5 @@
-﻿Imports System.Drawing.Drawing2D    'for SmoothingMode.AntiAlias
-Imports CustomControls.MyControls
-Imports FlatUI
+﻿'Imports System.Drawing.Drawing2D    'for SmoothingMode.AntiAlias
+'Imports FlatUI
 Imports ServerClientCommon.ServerClientCommon
 
 Public Class formMain
@@ -31,12 +30,6 @@ Public Class formMain
         l.DoIteration()
         l.DoIteration()
         l.DoIteration()
-
-        For Each c As Control In Me.Controls
-            If c.GetType Is GetType(MyButton) Then
-                CType(c, MyButton).Init()
-            End If
-        Next
 
         Dim path As New Drawing2D.GraphicsPath
         path.StartFigure()

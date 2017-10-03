@@ -3,8 +3,9 @@ Imports Server
 Imports ServerClientCommon.ServerClientCommon
 Imports System.Xml
 
+
 Public Class ServerForm
-    Private xmlPath As String = "D:\Password\password.xml"
+    Private xmlPath As String = "G:\Password\password.xml"
 #Region "Variables"
     Private WithEvents server As Server
 #End Region
@@ -26,22 +27,31 @@ Public Class ServerForm
     End Sub
 
     Private Sub OnClientVaildating(args As ClientValidatingEventArgs) Handles server.ClientVaildating
-        AppendConsoleText("Validating " + args.receiver.username + "...")
-        'do some vaildation
-        Dim doc As New XmlDocument
-        doc.Load(xmlPath)
-        For Each child As XmlNode In doc.ChildNodes
-            If child.Name = "Users" Then
-                For Each user As XmlNode In child.ChildNodes
-                    Dim u As String = user.Attributes.GetNamedItem("name").Value
-                    Dim p As String = user.Attributes.GetNamedItem("password").Value
-                    If args.request.username = u AndAlso args.request.password = p Then
-                        args.confirmAction()
-                    End If
-                Next
-            End If
-        Next
-
+        AppendConsoleText("Validating " + args.request.username + "...")
+        'xml validataion
+        'Dim doc As New XmlDocument
+        'doc.Load(xmlPath)
+        'For Each child As XmlNode In doc.ChildNodes
+        '    If child.Name = "Users" Then
+        '        For Each user As XmlNode In child.ChildNodes
+        '            Dim u As String = user.Attributes.GetNamedItem("name").Value
+        '            Dim p As String = user.Attributes.GetNamedItem("password").Value
+        '            If args.request.username = u AndAlso args.request.password = p Then
+        '                args.confirmAction()
+        '            End If
+        '        Next
+        '    End If
+        'Next
+        'Database validation
+        Dim db As New SQLControl
+        db.AddParam("@un", args.request.username)
+        db.ExecuteQuery("SELECT Password FROM [UserData] WHERE Username = @un")
+        Dim pw As String = RTrim(CType(db.dataTable.Rows(0).Item(0), String))
+        If pw = args.request.password Then
+            args.confirmAction()
+        Else
+            args.refuseAction()
+        End If
     End Sub
 
     Private Sub OnClientValidatedSuccess(r As Receiver) Handles server.ClientValidatedSuccess
@@ -91,6 +101,10 @@ Public Class ServerForm
             Return
         End If
         txtBox.AppendText(str & vbCrLf)
+    End Sub
+
+    Private Sub miConfigureDatabase_Click(sender As Object, e As EventArgs) Handles miConfigureDatabase.Click
+        frmDatabaseConfig.Show()
     End Sub
 
 #End Region

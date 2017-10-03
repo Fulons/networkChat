@@ -18,7 +18,7 @@ Public Class LSystem
     Public Sub DoIteration()
         result = Nothing
         For Each c As Char In axiom
-            Dim str As String
+            Dim str As String = ""
             If (rules.TryGetValue(c, str)) Then
                 result += str
             Else
