@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frmLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,6 +30,7 @@ Partial Class Form1
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -45,14 +46,14 @@ Partial Class Form1
         '
         Me.txtName.Location = New System.Drawing.Point(53, 25)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(95, 20)
+        Me.txtName.Size = New System.Drawing.Size(154, 20)
         Me.txtName.TabIndex = 1
         '
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(53, 51)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(95, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(154, 20)
         Me.txtEmail.TabIndex = 2
         '
         'chkMarketing
@@ -67,7 +68,7 @@ Partial Class Form1
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(15, 100)
+        Me.btnAdd.Location = New System.Drawing.Point(81, 100)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(60, 23)
         Me.btnAdd.TabIndex = 4
@@ -76,7 +77,7 @@ Partial Class Form1
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(88, 100)
+        Me.btnExit.Location = New System.Drawing.Point(147, 100)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(60, 23)
         Me.btnExit.TabIndex = 5
@@ -101,11 +102,21 @@ Partial Class Form1
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Email"
         '
-        'Form1
+        'btnLogin
+        '
+        Me.btnLogin.Location = New System.Drawing.Point(15, 100)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(60, 23)
+        Me.btnLogin.TabIndex = 8
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
+        'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(199, 145)
+        Me.ClientSize = New System.Drawing.Size(214, 127)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnExit)
@@ -114,8 +125,8 @@ Partial Class Form1
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "frmLogin"
+        Me.Text = "Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -128,5 +139,6 @@ Partial Class Form1
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents btnLogin As System.Windows.Forms.Button
 
 End Class

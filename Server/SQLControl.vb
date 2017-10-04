@@ -51,6 +51,8 @@ Public Class SQLControl
         params.Add(newParam)
     End Sub
 
+
+
     Public Function HasException(Optional Report As Boolean = False) As Boolean
         If String.IsNullOrEmpty(exception) = False Then
             If Report = True Then
