@@ -1,6 +1,5 @@
 ﻿Imports System.Data.SqlClient
 
-
 Public Class SQLControl
 
     Private connection As New SqlConnection("Server=51.7.177.8; Database=TestDatabase; User ID=sa; Password=**********;")

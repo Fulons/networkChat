@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="40145ce9-ca99-438a-9662-f16f475f8f5d1" Bounds="-129.442929178874,-2134.14333007813,76.5633333333333,25.96" Label="New Node" />
+    <Node Id="42f76086-476d-4559-8914-0fe84cd8b67c1" Bounds="-120.448086029517,-2294.1036046875,76.5633333333333,25.96" Label="New Node" UseManualLocation="True" />
+    <Node Id="bfc6903c-7072-4d20-a8a0-f67469b27251" Bounds="-149.442922169539,-2174.1435046875,116.563333333333,85.9602746088258" Group="Expanded" Label="New Group" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="bfc6903c-7072-4d20-a8a0-f67469b27251" Target="40145ce9-ca99-438a-9662-f16f475f8f5d1" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+  </Properties>
+</DirectedGraph>

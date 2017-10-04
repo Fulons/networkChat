@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FlatUI", "FlatUI\FlatUI.vbproj", "{10059C74-BAD4-4CC1-8E6B-64BE3EF2A89A}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -14,6 +14,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Server", "Server\Server.vbp
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ServerClientCommon", "ServerClientCommon\ServerClientCommon.vbproj", "{43E04C12-87E0-4612-98BF-1C8644ED8847}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "sqlTest", "sqlTest\sqlTest.vbproj", "{87C5E219-9D32-49C6-8C56-79A699383E50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{43E04C12-87E0-4612-98BF-1C8644ED8847}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{43E04C12-87E0-4612-98BF-1C8644ED8847}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43E04C12-87E0-4612-98BF-1C8644ED8847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87C5E219-9D32-49C6-8C56-79A699383E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C5E219-9D32-49C6-8C56-79A699383E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C5E219-9D32-49C6-8C56-79A699383E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C5E219-9D32-49C6-8C56-79A699383E50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
