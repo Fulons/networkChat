@@ -22,10 +22,12 @@ Public Class AccessSQLControl
     Public Sub ExecuteQuery(query As String)
         recordCount = 0
         exception = ""
-
         Try
             connection.Open()
+
+            command = New OleDbCommand(query, connection)
             params.ForEach(Sub(p) command.Parameters.Add(p))
+
             params.Clear()
 
             dataTable = New DataTable
