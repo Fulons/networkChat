@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
-    <Import Include="ServerClientCommon" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
@@ -85,6 +84,12 @@
       <DependentUpon>frmDatabaseConfig.vb</DependentUpon>
     </Compile>
     <Compile Include="frmDatabaseConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServerSettings.Designer.vb">
+      <DependentUpon>frmServerSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServerSettings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -111,6 +116,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SQLControl.vb" />
+    <Compile Include="UserDatabaseCustomControls\ctrlAccessDBConnection.Designer.vb">
+      <DependentUpon>ctrlAccessDBConnection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserDatabaseCustomControls\ctrlAccessDBConnection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserDatabaseCustomControls\ctrlSQLDBConnection.Designer.vb">
+      <DependentUpon>ctrlSQLDBConnection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserDatabaseCustomControls\ctrlSQLDBConnection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserDatabaseCustomControls\ctrlXMLDBConnection.Designer.vb">
+      <DependentUpon>ctrlXMLDBConnection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserDatabaseCustomControls\ctrlXMLDBConnection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmConsole.resx">
@@ -118,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatabaseConfig.resx">
       <DependentUpon>frmDatabaseConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServerSettings.resx">
+      <DependentUpon>frmServerSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -127,6 +153,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ServerForm.resx">
       <DependentUpon>ServerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDatabaseCustomControls\ctrlAccessDBConnection.resx">
+      <DependentUpon>ctrlAccessDBConnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDatabaseCustomControls\ctrlSQLDBConnection.resx">
+      <DependentUpon>ctrlSQLDBConnection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDatabaseCustomControls\ctrlXMLDBConnection.resx">
+      <DependentUpon>ctrlXMLDBConnection.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -25,14 +25,14 @@ Partial Class frmClient
         Me.rtxtChat = New System.Windows.Forms.RichTextBox()
         Me.lbUsers = New System.Windows.Forms.ListBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.txtMessageInput = New System.Windows.Forms.TextBox()
-        Me.btnSend = New System.Windows.Forms.Button()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLogin = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLogout = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuChatLogs = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.txtMessageInput = New System.Windows.Forms.TextBox()
+        Me.btnSend = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,6 +66,43 @@ Partial Class frmClient
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuLogin, Me.mnuLogout, Me.mnuChatLogs, Me.mnuHelp, Me.mnuExit})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'mnuLogin
+        '
+        Me.mnuLogin.Name = "mnuLogin"
+        Me.mnuLogin.Size = New System.Drawing.Size(127, 22)
+        Me.mnuLogin.Text = "Login"
+        '
+        'mnuLogout
+        '
+        Me.mnuLogout.Name = "mnuLogout"
+        Me.mnuLogout.Size = New System.Drawing.Size(127, 22)
+        Me.mnuLogout.Text = "Logout"
+        '
+        'mnuChatLogs
+        '
+        Me.mnuChatLogs.Name = "mnuChatLogs"
+        Me.mnuChatLogs.Size = New System.Drawing.Size(127, 22)
+        Me.mnuChatLogs.Text = "Chat Logs"
+        '
+        'mnuHelp
+        '
+        Me.mnuHelp.Name = "mnuHelp"
+        Me.mnuHelp.Size = New System.Drawing.Size(127, 22)
+        Me.mnuHelp.Text = "Help"
+        '
+        'mnuExit
+        '
+        Me.mnuExit.Name = "mnuExit"
+        Me.mnuExit.Size = New System.Drawing.Size(127, 22)
+        Me.mnuExit.Text = "Exit"
+        '
         'txtMessageInput
         '
         Me.txtMessageInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
@@ -84,43 +121,6 @@ Partial Class frmClient
         Me.btnSend.TabIndex = 4
         Me.btnSend.Text = "Send"
         Me.btnSend.UseVisualStyleBackColor = True
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuLogin, Me.mnuLogout, Me.mnuChatLogs, Me.mnuHelp, Me.mnuExit})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'mnuLogin
-        '
-        Me.mnuLogin.Name = "mnuLogin"
-        Me.mnuLogin.Size = New System.Drawing.Size(152, 22)
-        Me.mnuLogin.Text = "Login"
-        '
-        'mnuLogout
-        '
-        Me.mnuLogout.Name = "mnuLogout"
-        Me.mnuLogout.Size = New System.Drawing.Size(152, 22)
-        Me.mnuLogout.Text = "Logout"
-        '
-        'mnuChatLogs
-        '
-        Me.mnuChatLogs.Name = "mnuChatLogs"
-        Me.mnuChatLogs.Size = New System.Drawing.Size(152, 22)
-        Me.mnuChatLogs.Text = "Chat Logs"
-        '
-        'mnuHelp
-        '
-        Me.mnuHelp.Name = "mnuHelp"
-        Me.mnuHelp.Size = New System.Drawing.Size(152, 22)
-        Me.mnuHelp.Text = "Help"
-        '
-        'mnuExit
-        '
-        Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(152, 22)
-        Me.mnuExit.Text = "Exit"
         '
         'frmClient
         '
