@@ -22,72 +22,72 @@ Partial Class ctrlIP
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtIPFirst = New System.Windows.Forms.TextBox()
+        Me.txtIPFourth = New System.Windows.Forms.TextBox()
+        Me.txtIPThird = New System.Windows.Forms.TextBox()
+        Me.txtIPSecond = New System.Windows.Forms.TextBox()
+        Me.txtPort = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtIPFirst
         '
-        Me.TextBox1.Location = New System.Drawing.Point(3, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(27, 20)
-        Me.TextBox1.TabIndex = 0
-        Me.TextBox1.Text = "192"
+        Me.txtIPFirst.Location = New System.Drawing.Point(3, 3)
+        Me.txtIPFirst.Name = "txtIPFirst"
+        Me.txtIPFirst.Size = New System.Drawing.Size(27, 20)
+        Me.txtIPFirst.TabIndex = 0
+        Me.txtIPFirst.Text = "192"
         '
-        'TextBox2
+        'txtIPFourth
         '
-        Me.TextBox2.Location = New System.Drawing.Point(102, 3)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(27, 20)
-        Me.TextBox2.TabIndex = 1
-        Me.TextBox2.Text = "192"
+        Me.txtIPFourth.Location = New System.Drawing.Point(102, 3)
+        Me.txtIPFourth.Name = "txtIPFourth"
+        Me.txtIPFourth.Size = New System.Drawing.Size(27, 20)
+        Me.txtIPFourth.TabIndex = 1
+        Me.txtIPFourth.Text = "192"
         '
-        'TextBox3
+        'txtIPThird
         '
-        Me.TextBox3.Location = New System.Drawing.Point(69, 3)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(27, 20)
-        Me.TextBox3.TabIndex = 2
-        Me.TextBox3.Text = "192"
+        Me.txtIPThird.Location = New System.Drawing.Point(69, 3)
+        Me.txtIPThird.Name = "txtIPThird"
+        Me.txtIPThird.Size = New System.Drawing.Size(27, 20)
+        Me.txtIPThird.TabIndex = 2
+        Me.txtIPThird.Text = "192"
         '
-        'TextBox4
+        'txtIPSecond
         '
-        Me.TextBox4.Location = New System.Drawing.Point(36, 3)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(27, 20)
-        Me.TextBox4.TabIndex = 3
-        Me.TextBox4.Text = "192"
+        Me.txtIPSecond.Location = New System.Drawing.Point(36, 3)
+        Me.txtIPSecond.Name = "txtIPSecond"
+        Me.txtIPSecond.Size = New System.Drawing.Size(27, 20)
+        Me.txtIPSecond.TabIndex = 3
+        Me.txtIPSecond.Text = "192"
         '
-        'TextBox5
+        'txtPort
         '
-        Me.TextBox5.Location = New System.Drawing.Point(142, 3)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(40, 20)
-        Me.TextBox5.TabIndex = 4
-        Me.TextBox5.Text = "65555"
+        Me.txtPort.Location = New System.Drawing.Point(142, 3)
+        Me.txtPort.Name = "txtPort"
+        Me.txtPort.Size = New System.Drawing.Size(40, 20)
+        Me.txtPort.TabIndex = 4
+        Me.txtPort.Text = "65555"
         '
         'ctrlIP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPort)
+        Me.Controls.Add(Me.txtIPSecond)
+        Me.Controls.Add(Me.txtIPThird)
+        Me.Controls.Add(Me.txtIPFourth)
+        Me.Controls.Add(Me.txtIPFirst)
         Me.Name = "ctrlIP"
         Me.Size = New System.Drawing.Size(185, 26)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents txtIPFirst As System.Windows.Forms.TextBox
+    Friend WithEvents txtIPFourth As System.Windows.Forms.TextBox
+    Friend WithEvents txtIPThird As System.Windows.Forms.TextBox
+    Friend WithEvents txtIPSecond As System.Windows.Forms.TextBox
+    Friend WithEvents txtPort As System.Windows.Forms.TextBox
 
 End Class
