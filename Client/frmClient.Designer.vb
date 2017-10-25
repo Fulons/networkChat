@@ -43,7 +43,7 @@ Partial Class frmClient
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.rtxtChat.Location = New System.Drawing.Point(12, 27)
         Me.rtxtChat.Name = "rtxtChat"
-        Me.rtxtChat.Size = New System.Drawing.Size(689, 401)
+        Me.rtxtChat.Size = New System.Drawing.Size(702, 418)
         Me.rtxtChat.TabIndex = 0
         Me.rtxtChat.Text = ""
         '
@@ -52,9 +52,9 @@ Partial Class frmClient
         Me.lbUsers.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbUsers.FormattingEnabled = True
-        Me.lbUsers.Location = New System.Drawing.Point(707, 27)
+        Me.lbUsers.Location = New System.Drawing.Point(720, 27)
         Me.lbUsers.Name = "lbUsers"
-        Me.lbUsers.Size = New System.Drawing.Size(120, 420)
+        Me.lbUsers.Size = New System.Drawing.Size(120, 446)
         Me.lbUsers.TabIndex = 1
         '
         'MenuStrip1
@@ -62,7 +62,7 @@ Partial Class frmClient
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(839, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(852, 24)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -70,15 +70,15 @@ Partial Class frmClient
         '
         Me.txtMessageInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtMessageInput.Location = New System.Drawing.Point(12, 438)
+        Me.txtMessageInput.Location = New System.Drawing.Point(12, 455)
         Me.txtMessageInput.Name = "txtMessageInput"
-        Me.txtMessageInput.Size = New System.Drawing.Size(608, 20)
+        Me.txtMessageInput.Size = New System.Drawing.Size(621, 20)
         Me.txtMessageInput.TabIndex = 3
         '
         'btnSend
         '
         Me.btnSend.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSend.Location = New System.Drawing.Point(626, 436)
+        Me.btnSend.Location = New System.Drawing.Point(639, 453)
         Me.btnSend.Name = "btnSend"
         Me.btnSend.Size = New System.Drawing.Size(75, 23)
         Me.btnSend.TabIndex = 4
@@ -126,7 +126,7 @@ Partial Class frmClient
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(839, 465)
+        Me.ClientSize = New System.Drawing.Size(852, 482)
         Me.Controls.Add(Me.btnSend)
         Me.Controls.Add(Me.txtMessageInput)
         Me.Controls.Add(Me.lbUsers)
