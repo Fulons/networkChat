@@ -70,6 +70,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChatLog.Designer.vb">
+      <DependentUpon>frmChatLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChatLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmClient.Designer.vb">
       <DependentUpon>frmClient.vb</DependentUpon>
     </Compile>
@@ -99,6 +105,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmChatLog.resx">
+      <DependentUpon>frmChatLog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmClient.resx">
       <DependentUpon>frmClient.vb</DependentUpon>
     </EmbeddedResource>
