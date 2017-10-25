@@ -76,6 +76,12 @@
     <Compile Include="frmClient.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmClientLogin.Designer.vb">
+      <DependentUpon>frmClientLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,6 +102,9 @@
     <EmbeddedResource Include="frmClient.resx">
       <DependentUpon>frmClient.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmClientLogin.resx">
+      <DependentUpon>frmClientLogin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -114,6 +123,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServerClientCommon\ServerClientCommon.vbproj">
+      <Project>{43E04C12-87E0-4612-98BF-1C8644ED8847}</Project>
+      <Name>ServerClientCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
